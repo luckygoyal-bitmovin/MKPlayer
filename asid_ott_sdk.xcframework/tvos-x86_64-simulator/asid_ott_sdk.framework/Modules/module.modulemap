@@ -1,0 +1,6 @@
+framework module asid_ott_sdk {
+  umbrella header "asid_ott_sdk.h"
+
+  export *
+  module * { export * }
+}
