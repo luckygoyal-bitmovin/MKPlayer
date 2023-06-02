@@ -18,9 +18,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/mkplayer-ios/OMSDK_Mediakind.git", exact: "0.0.2"),
         .package(url: "https://github.com/bitmovin/player-ios.git",
-                    exact:"3.34.1"),
-        .package(url: "https://github.com/bitmovin/bitmovin-analytics-collector-ios",
-                 exact:"2.9.2")
+                    exact:"3.34.1")
     ],
     
     targets: [
@@ -33,8 +31,7 @@ let package = Package(
         
         .target(name: "MKPlayerPackageWrapper",
                 dependencies: [ "Alamofire", "OMSDK_Mediakind", "MKPlayer", "GoogleCast", "asid_ott_sdk",
-                    .product(name: "BitmovinPlayer", package: "player-ios"),
-                    .product(name: "BitmovinPlayerCollector", package: "bitmovin-analytics-collector-ios"),
+                    .product(name: "BitmovinPlayer", package: "player-ios")
                     ],
                 cSettings: [
                     .define("BUILD_LIBRARY_FOR_DISTRIBUTION", to: "YES")
